@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Letter For You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <div id="closed-envelope" class="view-container">
+            <div class="image-box">
+                <img src="https://i.pinimg.com/1200x/78/17/e5/7817e5f9c8553d0cdbd185388027e18c.jpg" alt="Tulip Envelope">
+                <button class="kiss-button" onclick="revealLetter()">Kiss me to open 💋</button>
+            </div>
+        </div>
+
+        <div id="open-letter" class="view-container hidden">
+            <div class="letter-frame">
+                <img src="https://i.pinimg.com/736x/5f/83/10/5f8310700c18479fa715aaeb7bedc98d.jpg" alt="Open Letter Background" class="bg-card">
+                
+                <div class="white-paper-overlay">
+                    <div class="my-message">
+                        <p>Langga ⁠♡⁠♡⁠♡⁠♡</p>
+                        <p>Heheheheh, Iloveyouuuu >ᴗ< </p>
+                        <p class="signature">-mee</p>
+                    </div>
+                </div>
+            </div>
+            <button class="reset-link" onclick="hideLetter()">Close Letter</button>
+        </div>
+    </div>
+
+    <script>
+        function revealLetter() {
+            document.getElementById('closed-envelope').classList.add('hidden');
+            document.getElementById('open-letter').classList.remove('hidden');
+        }
+        function hideLetter() {
+            document.getElementById('open-letter').classList.add('hidden');
+            document.getElementById('closed-envelope').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+body {
+    background-color: #382424; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Georgia', serif;
+}
+
+.main-wrapper {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    text-align: center;
+}
+
+.view-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.8s ease;
+}
+
+.hidden { display: none; }
+
+.image-box img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.kiss-button {
+    margin-top: -30px;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    background: #e84393;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.kiss-button:hover {
+    transform: scale(1.1) translateY(-5px);
+    background: #fd79a8;
+}
+
+.letter-frame {
+    position: relative;
+    width: 100%;
+}
+
+.bg-card {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* THE MESSAGE AREA */
+.white-paper-overlay {
+    position: absolute;
+    top: 36%;    
+    left: 17.5%;   
+    width: 65%;  
+    height: 25%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* This rotation matches the image's perspective */
+    transform: rotate(-2.5deg); 
+}
+
+.my-message {
+    color: #4b3131;
+    font-size: 0.95rem; /* Adjusted for readability */
+    line-height: 1.3;
+    text-align: center;
+    font-style: italic;
+}
+
+.my-message p {
+    margin: 5px 0;
+}
+
+.signature {
+    font-weight: bold;
+    margin-top: 10px !important;
+}
+
+.reset-link {
+    background: none;
+    border: none;
+    color: #fab1a0;
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
